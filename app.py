@@ -1,24 +1,4 @@
-final-exam-web-app/
-├── web/                           
-│   ├── app.py                  
-│   ├── requirements.txt         
-│   ├── Dockerfile                
-│   ├── static/                   
-│   │   └── style.css            
-│   └── templates/             
-│       ├── index.html            
-│       ├── about.html           
-│       ├── myresearch.html      
-│       └── reference.html        
-│
-├── db/
-│   └── init.sql                 
-│
-├── docker-compose.yml            
-├── README.md                    
-└── .gitignore   
-
-from flask import Flask, render_template, request, redirect
+ from flask import Flask, render_template, request, redirect
 import mysql.connector
 
 app = Flask(__name__)
