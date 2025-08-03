@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Research</title>
+</head>
+<body>
+  <h1>หัวข้องานวิจัยของฉัน</h1>
+  <p>การตรวจจับมนุษย์แบบเรียลไทม์ด้วย Deep Learning และระบบแจ้งเตือนผ่าน LINE Notify</p>
+
+  <h2>รายการอ้างอิง (IEEE Format)</h2>
+  <ul>
+    {% for item in references %}
+      <li>
+        {{ item.title }}<br>
+        <a href="{{ item.pdf_url }}" target="_blank">เปิด PDF</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <a href="/">กลับหน้าหลัก</a>
+</body>
+</html>

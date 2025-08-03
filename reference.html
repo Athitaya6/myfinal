@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manage References</title>
+</head>
+<body>
+  <h1>จัดการรายการอ้างอิง</h1>
+
+  <form method="POST" action="/reference/add">
+    <label>ชื่อ Paper (IEEE Format):</label><br>
+    <input type="text" name="title" required><br><br>
+
+    <label>ลิงก์ PDF:</label><br>
+    <input type="text" name="pdf_url" required><br><br>
+
+    <button type="submit">เพิ่มรายการอ้างอิง</button>
+  </form>
+
+  <hr>
+
+  <h2>รายการทั้งหมด</h2>
+  <ul>
+    {% for item in references %}
+      <li>
+        {{ item.title }}<br>
+        <a href="{{ item.pdf_url }}" target="_blank">เปิด PDF</a>
+
+        <form method="POST" action="/reference/delete/{{ item.id }}" style="display:inline;">
+          <button type="submit">ลบ</button>
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <a href="/">กลับหน้าหลัก</a>
+</body>
+</html>
