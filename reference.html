@@ -7,11 +7,15 @@
   <h1>จัดการรายการอ้างอิง</h1>
 
   <form method="POST" action="/reference/add">
-    <label>ชื่อ Paper (IEEE Format):</label><br>
-    <input type="text" name="title" required><br><br>
+  <label for="title">ชื่อ Paper (IEEE Format):</label><br>
+  <input type="text" id="title" name="title" placeholder="[1] A. R. Sargano, Y. N. Singh, and M. Ahmad, “Deep learning-based real-time multiple-person action recognition system,” Sensors, vol. 20, no. 16, pp. 4758, Aug. 2020." required><br><br>
 
-    <label>ลิงก์ PDF:</label><br>
-    <input type="text" name="pdf_url" required><br><br>
+  <label for="pdf_url">ลิงก์ PDF:</label><br>
+  <input type="text" id="pdf_url" name="pdf_url" placeholder="/static/sensors-20-04758.pdf" required><br><br>
+
+  <button type="submit">เพิ่มรายการอ้างอิง</button>
+</form>
+
 
     <button type="submit">เพิ่มรายการอ้างอิง</button>
   </form>
